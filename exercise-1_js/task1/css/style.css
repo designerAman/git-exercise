@@ -1,0 +1,112 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.timeAndDate {
+    height: 70px;
+}
+
+.stopWatchContainer {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 50%;
+}
+
+.stopWatchTimer {
+    height: 30%;
+    width: 70%;
+    border: 5px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.stopWatchContainer h1 {
+    font-size: 400%;
+}
+
+.stopWatchTimer h1 span {
+    display: inline-block;
+    width: 45px;
+}
+
+@media(max-width: 1500px) {
+    .main h1 {
+        font-size: 200%;
+    }
+    .stopWatchTimer h1 {
+        font-size: 300%;
+    }
+}
+
+@media(max-width: 1500px) {
+    .main h1 {
+        font-size: 200%;
+    }
+    .stopWatchTimer h1 {
+        font-size: 300%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .main h1 {
+        font-size: 150%;
+    }
+    .stopWatchTimer h1 {
+        font-size: 220%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .stopWatchTimer  {
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .main h1 {
+        font-size: 120%;
+    }
+    .stopWatchContainer {
+        width: 70%;
+        height: 40%;
+    }
+    .stopWatchTimer h1 {
+        font-size: 220%;
+    }
+    .stopWatchTimer  {
+        width: 100%;
+    }
+}
+
+@media(max-width: 420px) {
+    .main h1 {
+        font-size: 100%;
+    }
+
+    .stopWatchContainer {
+        width: 90%;
+        height: 40%;
+    }
+
+    .stopWatchTimer h1 {
+        font-size: 150%;
+    }
+}
