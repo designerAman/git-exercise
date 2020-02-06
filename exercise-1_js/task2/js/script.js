@@ -36,16 +36,16 @@ function checkUser() {
 }
 
 function showUsers() {
+    checkUser();
     addHere.innerHTML = '';
     for (let i = 0; i < userArr.length; i++) {
-        checkUser();
         userArr[i].id = i;
         addHere.innerHTML += `<tr>
         <th scope="row">${i+1}</th>
         <td>${userArr[i].firstName}</td>
         <td>${userArr[i].lastName}</td>
         <td>
-            <button type="button" onclick="editBtn(${userArr[i].id})" class="btn btn-primary mr-3 pr-2 edit"><i class="far fa-edit"></i></button>
+            <button type="button" onclick="editBtn(${i})" class="btn btn-primary mr-3 pr-2 edit"><i class="far fa-edit"></i></button>
             <button type="button" onclick="deleteBtn(${i})" class="btn btn-danger delete"><i class="far fa-trash-alt"></i></button>
         </td>
       </tr>`
@@ -54,15 +54,15 @@ function showUsers() {
 
 function editBtn(userId) {
     currentUserIdForUpdate = userId;
-    firstName.value = userArr[userId - 1].firstName;
-    lastName.value = userArr[userId - 1].lastName;
+    firstName.value = userArr[userId ].firstName;
+    lastName.value = userArr[userId ].lastName;
     addButton.style.display = 'none'
     updateButton.style.display = 'initial'
 }
 
 function updateUserDetails() {
-    userArr[currentUserIdForUpdate - 1].firstName = firstName.value;
-    userArr[currentUserIdForUpdate - 1].lastName = lastName.value;
+    userArr[currentUserIdForUpdate].firstName = firstName.value;
+    userArr[currentUserIdForUpdate].lastName = lastName.value;
     addButton.style.display = 'initial'
     updateButton.style.display = 'none'
     firstName.value = '';
