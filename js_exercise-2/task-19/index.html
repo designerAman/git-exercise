@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        .addDiv, .deleteDiv {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>19. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ delete​ ​ particular​ ​ object​ ​ from​ ​ array​ ​ and​ ​
+        add​ ​ new​ ​ object​ ​ at particular​ ​position.</h1>
+    <h1>Given :</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody class="givenData">
+
+        </tbody>
+    </table><br>
+    <div class="opDiv">
+        <button class="addOp">Add</button>
+        <button class="deleteOp">Delete</button>
+    </div>
+
+    <div class="addDiv">
+        <input class="name" type="text" placeholder="Enter name">
+        <input class="age" type="text" placeholder="Enter age">
+        <input class="positionAdd" type="number" placeholder="Enter position to add">
+        <button class="addBtn">Add</button>
+    </div>
+
+    <div class="deleteDiv">
+        <input class="positionDel" type="number" placeholder="Enter position to add">
+        <button class="deleteBtn">Delete</button>
+    </div>
+    <h1>Output :</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody class="output">
+
+        </tbody>
+    </table><br>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
