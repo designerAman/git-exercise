@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2f6ed772ee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <h3 class="dashboardType"></h3>
+            </a>
+            <div>
+                <span class="nameOnDashboard"></span> <a href="" class="logout">Logout <i
+                        class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </nav>
+        <div class="d-flex justify-content-between border-bottom align-items-center pr-4 bg-primary">
+            <div></div>
+            <h1 class="text-white">Courses</h1>
+            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#addCourseModal"
+                style="height: 40px;">Add Course</button>
+        </div>
+
+
+        <div class="cards">
+            <div class="card-columns adminCourses">
+                <!-- <div class="card">
+                    <div class="card-body text-center">
+                        <img src="https://miro.medium.com/max/700/1*6lGiuTY6uc2oHJk5qfcRHg.png" alt="" width="inherit">
+                        <p class="card-text ">HTML</p>
+                        <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#exampleModal">Assign
+                            Course</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="https://miro.medium.com/max/700/1*6lGiuTY6uc2oHJk5qfcRHg.png" alt="" width="inherit">
+                        <p class="card-text ">HTML</p>
+                        <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#exampleModal">Assign
+                            Course</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="https://miro.medium.com/max/700/1*6lGiuTY6uc2oHJk5qfcRHg.png" alt="" width="inherit">
+                        <p class="card-text">HTML</p>
+                        <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#exampleModal">Assign
+                            Course</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addCourseModalLabel">Add New Course</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Course Name</span>
+                            </div>
+                            <input type="text" class="form-control courseName" aria-label="Default"
+                                aria-describedby="inputGroup-sizing-default" placeholder="Course Name">
+                            <!-- <p class="text-danger small requiredCourseName">*please enter course name</p> -->
+                        </div>
+                        <p class="text-danger small requiredCourseName">*please enter course name</p>
+                        <p class="text-danger small courseAlreadyExist">*Course Name already added</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Course Link</span>
+                            </div>
+                            <input type="text" class="form-control courseLink" aria-label="Default"
+                                aria-describedby="inputGroup-sizing-default" placeholder="Course Link">
+                        </div>
+                        <p class="text-danger small requiredCourseLink">*please provide course link</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Course Image</span>
+                            </div>
+                            <input type="text" class="form-control courseLink courseImage" aria-label="Default"
+                                aria-describedby="inputGroup-sizing-default"
+                                placeholder="Course image link from internet">
+                        </div>
+                        <p class="text-danger small requiredCourseImage">*please provide course Image</p>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                        <button type="button" class="btn btn-primary addCourseBtn">Add Course</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Student List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Assign</th>
+                              </tr>
+                            </thead>
+                            <tbody class="studentList">
+                              <!-- <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>-->
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                        <button type="button" class="btn btn-primary asignBtn">Assign</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
