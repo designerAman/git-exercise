@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    position: absolute;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row {
+    width: 500px;
+    height: 200px;
+    /* background-color: grey; */
+}
+
+.col-5 {
+    height: 200px;
+    width: 200px;
+    /* line-height: 50px; */
+    line-height: 200px;
+    border: 1px solid royalblue;
+}
+
+.box1 {
+    line-height: 50px;
+}
+
+.none {
+    display: none;
+}
+
+.box3, .box1 {
+    background-color: #729FCF;
+}
+
+.box2 {
+    background-color: royalblue;
+}
+
+.box4 {
+    background-color: yellow;
+}
